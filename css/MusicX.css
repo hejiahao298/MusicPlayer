@@ -1,0 +1,190 @@
+/* 采用utf-8编码格式 */
+@charset "utf-8";
+
+body{
+	background: url(../img/bg.gif) no-repeat;
+	background-size: cover; /* 自适应 */
+}
+
+/* --------------banner begin--------------- */
+/* 横幅样式 */
+.banner{
+	background: url(../img/m_bg.jpg) no-repeat;
+	background-position: -151px -137px;
+	width:660px ;
+	height:250px ;
+	margin:80px ;
+	opacity:0.8 ;
+	box-shadow:10px 10px 10px 1px black ;
+	position: relative;
+}
+
+/* 播放图片样式 */
+.banner .b_img img{
+	border-radius: 50%;  /* 修改成椭圆 */
+	cursor: pointer; /* 鼠标变手势 */
+	left:275px ;
+	top:72px ;
+	position: absolute;
+}
+
+/* 图片旋转的动画 */
+@keyframes img_rotate{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
+
+/* 动画执行的时间和次数 */
+.banner .img_rotate{
+	animation: img_rotate 6s infinite linear;  /* animation绑定 4s一圈 无休止 */
+}
+/* --------------banner end--------------- */
+
+/* --------------播放器 begin--------------- */
+/* 播放框样式 */
+.music{
+	width: 500px;
+	height: 100px;
+	background: #000000;
+	position: fixed;
+	left: 0px;
+	bottom: 50px;
+	opacity: 0.8;
+	box-shadow: 10px 10px 10px 1px black;
+}
+
+/* 音乐图片的位置 */
+.music .m_img{
+	margin-top: 5px;
+	margin-left: 10px;
+	float: left;  /* 左浮动 */
+}
+
+/* 音乐盒text样式 */
+.music .m_text{
+	float: left;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 39px;
+	margin-left: 20px;
+	font-size: 14px;
+}
+
+/* 音乐盒btn框样式 */
+.music .m_btn{
+	float: left;
+	position: absolute;
+	left: 280px;
+	top:-3px;
+}
+
+/* 音乐盒按钮标签 */
+.music .m_btn a{
+	float: left;
+	width: 50px;
+	height: 50px;
+	background: url(../img/player_bg.png);
+	margin-top: 30px;
+	margin-left: 7px;
+	border-radius: 50%;
+}
+
+/* 改变按钮的图片 */
+/* 上一首 */
+.music .m_btn .m_prev{ background-position: -255px -161px; }
+.music .m_btn .m_prev:hover{ background-position: -341px -162px; }
+/* 播放 */
+.music .m_btn .m_play{ background-position: -254px -63px; }
+.music .m_btn .m_play:hover{ background-position: -340px -63px; }
+/* 下一首 */
+.music .m_btn .m_next{ background-position: -79px -161px; }
+.music .m_btn .m_next:hover{ background-position: -166px -162px; }
+
+/* 设置播放器的缩放 */
+.music .m_close{
+	float: right;
+	background: url(../img/player_bg.png);
+	width: 23px;
+	height: 100px;
+	margin-top: 0px;
+	cursor: pointer; /* 鼠标变手势 */
+}
+
+/* 编写js时，隐藏或显示播放器的css样式 */
+.music .m_open{background-position: -36px 0px;}
+
+/* 编写js时，更换播放按钮为暂停时的css样式 */
+.music .m_btn .m_pause{
+	background-position: -167px -62px;
+}
+.music .m_btn .m_pause:hover{
+	background-position: -79px -63px;
+}
+
+/* --------------播放器 begin--------------- */
+
+
+/* --------------lieb begin--------------- */
+/* 列表框样式 */
+.lieb{
+	width: 270px;
+	height:100%;
+    position:fixed;
+    right:0px;
+    top:0px; 
+	background-color: 	LightGrey;
+	opacity: 0.8;
+}
+
+/* 列表标题样式 */
+.lieb .l_title{
+	position: relative;
+	font-weight: bolder;
+	font-size: 25px;
+	margin-left: 76px;
+	color: green;
+	letter-spacing: 0;
+	text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135 
+}
+
+/* 列表菜单 */
+.lieb ul li{
+	display: block;
+	float:left;
+	width: 213px;
+	height: 35px;
+	line-height: 43px;
+	border-bottom:1px solid black;
+	/* background-color: azure; */
+	list-style: none;
+	cursor: pointer; /* 鼠标变手势 */
+	font-size: 15px;
+}
+
+.lieb ul li:hover{
+	background-color: 	Silver;
+    /* border-radius: 20%; */
+}
+
+/* 列表关闭 */
+.lieb .l_close{
+    position: relative;
+	left: 0px;
+	width: 23px;
+	height: inherit;
+	margin-top: -48px;
+	background-color: black;
+	cursor: pointer; /* 鼠标变手势 */
+}
+
+.lieb .l_close ul li {
+	float:left;
+}
+
+/* 列表打开 */
+.lieb .l_open{
+	
+}
+
+/* --------------lieb begin--------------- */
